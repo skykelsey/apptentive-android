@@ -108,22 +108,8 @@ public class MessageCenterView extends FrameLayout implements MessageManager.OnS
 		messageListView.setAdapter(messageAdapter);
 
 		final TimestampView timestampView = (TimestampView) findViewById(R.id.timestamp_view);
-		messageListView.setOnScrollListener(new AbsListView.OnScrollListener() {
-			@Override
-			public void onScrollStateChanged(AbsListView view, int scrollState) {
-				if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE) {
-					timestampView.release(context);
-				} else {
-					timestampView.touch(context);
-				}
-			}
-
-			@Override
-			public void onScroll(AbsListView absListView, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-				timestampView.setTime("" + firstVisibleItem);
-			}
-		});
-
+		timestampView.setListView(messageListView);
+		messageListView.setOnScrollListener(timestampView);
 	}
 
 	public void setMessages(final List<Message> messages) {

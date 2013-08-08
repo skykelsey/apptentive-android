@@ -6,8 +6,9 @@
   ~ under which redistribution and use of this file is permitted.
   -->
 
-<set xmlns:android="http://schemas.android.com/apk/res/android">
-    <alpha android:duration="1000"
-           android:fromAlpha="1.0"
-           android:toAlpha="0"/>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+     android:interpolator="@android:anim/decelerate_interpolator">
+    <alpha android:duration="@android:integer/config_mediumAnimTime"
+           android:fromAlpha="0"
+           android:toAlpha="1.0"/>
 </set>

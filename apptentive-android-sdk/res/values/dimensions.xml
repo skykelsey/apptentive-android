@@ -9,4 +9,5 @@
     <dimen name="apptentive_text_large">22sp</dimen>
     <dimen name="apptentive_text_medium">18sp</dimen>
     <dimen name="apptentive_text_small">14sp</dimen>
+    <integer name="apptentive_timestamp_display_timeout">@android:integer/config_mediumAnimTime</integer>
 </resources>
