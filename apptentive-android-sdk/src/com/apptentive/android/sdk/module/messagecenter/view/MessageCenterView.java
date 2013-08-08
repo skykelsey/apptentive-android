@@ -60,7 +60,7 @@ public class MessageCenterView extends FrameLayout implements MessageManager.OnS
 
 		TextView titleTextView = (TextView) findViewById(R.id.apptentive_message_center_header_title);
 		String titleText = Configuration.load(context).getMessageCenterTitle();
-		if(titleText != null) {
+		if (titleText != null) {
 			titleTextView.setText(titleText);
 		}
 
@@ -92,7 +92,7 @@ public class MessageCenterView extends FrameLayout implements MessageManager.OnS
 		View attachButton = findViewById(R.id.apptentive_message_center_attach_button);
 		// Android devices can't take screenshots until version 4+
 		boolean canTakeScreenshot = Build.VERSION.RELEASE.matches("^4.*");
-		if(canTakeScreenshot) {
+		if (canTakeScreenshot) {
 			attachButton.setOnClickListener(new OnClickListener() {
 				public void onClick(View view) {
 					MetricModule.sendMetric(context, Event.EventLabel.message_center__attach);
@@ -106,6 +106,24 @@ public class MessageCenterView extends FrameLayout implements MessageManager.OnS
 		}
 		messageAdapter = new MessageAdapter<Message>(context);
 		messageListView.setAdapter(messageAdapter);
+
+		final TimestampView timestampView = (TimestampView) findViewById(R.id.timestamp_view);
+		messageListView.setOnScrollListener(new AbsListView.OnScrollListener() {
+			@Override
+			public void onScrollStateChanged(AbsListView view, int scrollState) {
+				if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE) {
+					timestampView.release(context);
+				} else {
+					timestampView.touch(context);
+				}
+			}
+
+			@Override
+			public void onScroll(AbsListView absListView, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+				timestampView.setTime("" + firstVisibleItem);
+			}
+		});
+
 	}
 
 	public void setMessages(final List<Message> messages) {
@@ -148,7 +166,7 @@ public class MessageCenterView extends FrameLayout implements MessageManager.OnS
 		} finally {
 			Util.ensureClosed(is);
 		}
-		if(thumbnail == null) {
+		if (thumbnail == null) {
 			return;
 		}
 
@@ -182,7 +200,8 @@ public class MessageCenterView extends FrameLayout implements MessageManager.OnS
 		void onSendFileMessage(Uri uri);
 	}
 
-	@SuppressWarnings("unchecked") // We should never get a message passed in that is not appropriate for the view it goes into.
+	@SuppressWarnings("unchecked")
+	// We should never get a message passed in that is not appropriate for the view it goes into.
 	public synchronized void onSentMessage(final Message message) {
 		setMessages(MessageManager.getMessages(context));
 	}
