@@ -107,7 +107,7 @@ public class MessageCenterView extends FrameLayout implements MessageManager.OnS
 		messageAdapter = new MessageAdapter<Message>(context);
 		messageListView.setAdapter(messageAdapter);
 
-		final TimestampView timestampView = (TimestampView) findViewById(R.id.timestamp_view);
+		final TimestampView timestampView = (TimestampView) findViewById(R.id.timestamp_frame);
 		timestampView.setListView(messageListView);
 		messageListView.setOnScrollListener(timestampView);
 	}

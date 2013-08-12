@@ -33,10 +33,9 @@
                   android:listSelector="@android:color/transparent"
                   android:divider="@null"/>
         <com.apptentive.android.sdk.module.messagecenter.view.TimestampView
-                android:id="@+id/timestamp_view"
+                android:id="@+id/timestamp_frame"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:gravity="center_vertical|right"
                 android:visibility="invisible"/>
     </FrameLayout>
     <LinearLayout android:layout_width="fill_parent"

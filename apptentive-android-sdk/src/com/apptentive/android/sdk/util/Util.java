@@ -17,6 +17,8 @@ import android.graphics.Rect;
 import android.net.ConnectivityManager;
 import android.view.*;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import com.apptentive.android.sdk.Log;
 
 import java.io.IOException;
@@ -132,6 +134,16 @@ public class Util {
 		return dp * scale;
 	}
 
+	public static float pixelsToSp(Context context, Float px) {
+		float scaledDensity = context.getResources().getDisplayMetrics().scaledDensity;
+		return px/scaledDensity;
+	}
+
+	public static float spToPixels(Context context, Float sp) {
+		float scaledDensity = context.getResources().getDisplayMetrics().scaledDensity;
+		return sp * scaledDensity;
+	}
+
 	/**
 	 * Internal use only.
 	 */
@@ -234,5 +246,16 @@ public class Util {
 
 	public static boolean isEmailValid(String email) {
 		return email.matches("^[^\\s@]+@[^\\s@]+$");
+	}
+
+	public static int getTotalHeightofListView(ListView listView) {
+		ListAdapter mAdapter = listView.getAdapter();
+		int totalHeight = 0;
+		for (int i = 0; i < mAdapter.getCount(); i++) {
+			View mView = mAdapter.getView(i, null, listView);
+			mView.measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED), View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
+			totalHeight += mView.getMeasuredHeight();
+		}
+		return totalHeight;
 	}
 }
