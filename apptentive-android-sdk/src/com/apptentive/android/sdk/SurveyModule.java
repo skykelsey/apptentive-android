@@ -165,8 +165,8 @@ public class SurveyModule {
 		for (final Question question : surveyDefinition.getQuestions()) {
 			if (question.getType() == Question.QUESTION_TYPE_SINGLELINE) {
 				TextSurveyQuestionView textQuestionView = new TextSurveyQuestionView(activity, (SinglelineQuestion) question);
-				textQuestionView.setOnSurveyQuestionAnsweredListener(new OnSurveyQuestionAnsweredListener() {
-					public void onAnswered() {
+				textQuestionView.setOnSurveyQuestionAnsweredListener(new OnSurveyQuestionAnsweredListener<View>() {
+					public void onAnswered(View view) {
 						sendMetricForQuestion(activity, question);
 						send.setEnabled(isSurveyValid());
 					}
@@ -174,8 +174,8 @@ public class SurveyModule {
 				questions.addView(textQuestionView);
 			} else if (question.getType() == Question.QUESTION_TYPE_MULTICHOICE) {
 				MultichoiceSurveyQuestionView multichoiceQuestionView = new MultichoiceSurveyQuestionView(activity, (MultichoiceQuestion) question);
-				multichoiceQuestionView.setOnSurveyQuestionAnsweredListener(new OnSurveyQuestionAnsweredListener() {
-					public void onAnswered() {
+				multichoiceQuestionView.setOnSurveyQuestionAnsweredListener(new OnSurveyQuestionAnsweredListener<View>() {
+					public void onAnswered(View view) {
 						sendMetricForQuestion(activity, question);
 						send.setEnabled(isSurveyValid());
 					}
@@ -183,8 +183,8 @@ public class SurveyModule {
 				questions.addView(multichoiceQuestionView);
 			} else if (question.getType() == Question.QUESTION_TYPE_MULTISELECT) {
 				MultiselectSurveyQuestionView multiselectQuestionView = new MultiselectSurveyQuestionView(activity, (MultiselectQuestion) question);
-				multiselectQuestionView.setOnSurveyQuestionAnsweredListener(new OnSurveyQuestionAnsweredListener() {
-					public void onAnswered() {
+				multiselectQuestionView.setOnSurveyQuestionAnsweredListener(new OnSurveyQuestionAnsweredListener<View>() {
+					public void onAnswered(View view) {
 						sendMetricForQuestion(activity, question);
 						send.setEnabled(isSurveyValid());
 					}

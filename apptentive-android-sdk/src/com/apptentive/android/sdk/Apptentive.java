@@ -6,6 +6,7 @@
 
 package com.apptentive.android.sdk;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -349,6 +350,7 @@ public class Apptentive {
 	// INTERNAL METHODS
 	// ****************************************************************************************
 
+	@SuppressLint("NewApi")
 	private static void init(final Context context) {
 
 		//
@@ -618,6 +620,5 @@ public class Apptentive {
 	/**
 	 * Internal use only.
 	 */
-	public static void onAppDidExit() {
-	}
+	public static void onAppDidExit() {}
 }
