@@ -5,7 +5,7 @@ sure it's working properly. Each section lists the minimum necessary configurati
 
 # Download
 
-The Apptentive Android SDK is open source. The project is lociated [here](https://github.com/apptentive/apptentive-android).
+The Apptentive Android SDK is open source. The project is located [here](https://github.com/apptentive/apptentive-android).
 
 To download the SDK, either clone the SDK
 
