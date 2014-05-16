@@ -46,7 +46,7 @@ customer behavior.
 **Events** are records of actions taken in your app. What constitutes an **Event** is up to you. For example, you may
 choose to keep track of each time a user has logs into your app, the app crashes, or they pass a level. **Events** are
 stored on the client, and can be used to determine when and where to show **Interactions**. Your app should contain at
-least five **Events**. The more **Events** you define in your app, the more powerful useful the **Apptentive SDK** will
+least five **Events**. The more **Events** you define in your app, the more useful the **Apptentive SDK** will
 be.
 
 **Events** are invoked using the [Apptentive.engage()](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#engage%28android.app.Activity,%20java.lang.String%29) method.
@@ -58,12 +58,11 @@ can do so by entering it manually on that page as well.
 ### Interactions
 
 **Interactions** are views that you can use to easily and proactively start conversations with your customers. You
-configure their content, the conditions necessary to show them, and which **Event** should trigger them,
-and the Apptentive SDK takes care of fetching them, evaluating the logic they contain, and displaying them. Each
+configure their content, the conditions necessary to show them, and the **Event** that should trigger them. The Apptentive SDK takes care of fetching them, evaluating the logic they contain, and displaying them. Each
 **Interaction** is configured on the server, so you can easily add or modify them after you've released your app,
 without modifying the source code. **Interactions** are displayed using the same [Apptentive.engage()](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#engage%28android.app.Activity,%20java.lang.String%29)
 method as **Events**, which is why adding several **Events** to your app during development is important. It allows you
-to configure an **Interaction** to display at **Event** of your choosing after you have shipped your app. The difference
+to configure an **Interaction** to display at the **Event** of your choosing after you have shipped your app. The difference
 between an **Event** and an **Interaction** is that an **Event** is a record of the `engage()` method being called,
 while an **Interaction** is a view or group of views that is displayed when `engage()` is called.
 
@@ -80,7 +79,7 @@ link in the top bar.
 ## Ratings Prompt
 
 The **Ratings Prompt Interaction** is a powerful tool to help you get better ratings and more reviews from happy
-customers, and start conversations with customers who don't love you yet. The **Ratings Prompt** is actually a series of
+customers, and start conversations with customers who have feedback, suggestions, and critiques. The **Ratings Prompt** is actually a series of
 views. The inital view is called the *Enjoyment Dialog*, and ask the customer whether they love your app. If the answer
 is yes, then they are shown the *Rating Dialog*, which offers them the oportunity to go to the app store to rate the
 app. If they don't love your app, will be taken to the [Message Center](#message-center) where they can give you
@@ -126,9 +125,7 @@ the first opportunity when your app starts up by calling `Apptentive.engage(this
 
 # Message Center
 
-With the **Apptentive Message Center** you and your customers talk directly without making them leave your app. By
-providing support through the app, the customer, you are able to provide high quality support and make your customers
-feel loved.
+With the **Apptentive Message Center** you and your customers talk directly without making them leave your app. Handling support inside the app will increase the number of support messages received and ensure a better customer experience.
 
 If the **Message Center** is being opened for the first time, the *Intro Dialog* will be shown instead. When the customer
 submits the *Intro Dialog*, they are taken to a *Thank You Dialog*, where they have a chance to open the
@@ -205,7 +202,7 @@ of the app, so you can better support your customers.
 
 ---
 
-# Misc
+# Miscellaneous
 
 ## Setting Rating Provider
 
@@ -296,7 +293,7 @@ pass that `Intent` to Apptentive, so we can check to see if the push came from u
 Next, in the `Activity` that you launched, you will need to allow Apptentive to run based on the push `Intent`. If the
 push notification came from us, this version of the SDK is compatible with the notification, and other conditions are
 met, then we will perform an action. This is generally to show a UI, such as **Message Center**. If we show a UI, this
-method will return true, else false. This method is a no-op if the push notification was not from **Apptentive**.
+method will return true, otherwise it will be false. This method is a no-op if the push notification was not from **Apptentive**.
 
 [Apptentive.handleOpenedPushNotification(Activity activity)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#handleOpenedPushNotification%28android.app.Activity%29)
 
@@ -315,7 +312,7 @@ public void onWindowFocusChanged(boolean hasFocus) {
 
 You may send us custom data associated with the **Device** or **Person**, that will be surfaced for you on our website. Data must be
 key/value string pairs. You can use this data simply to fill in information about the customer, but you can also use it
-in **[Interaction](#interactions)** logic used to to determine when they can be displayed.
+in **[Interaction](#interactions)** logic to determine when they can be displayed.
 
 * [Apptentive.addCustomDeviceData(Context context, String key, String value)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addCustomDeviceData%28android.content.Context,%20java.lang.String,%20java.lang.String%29)
 * [Apptentive.removeCustomDeviceData(Context context, String key)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#removeCustomDeviceData%28android.content.Context,%20java.lang.String%29)
