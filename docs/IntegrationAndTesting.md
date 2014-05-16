@@ -15,7 +15,7 @@ Or download the [latest release](https://github.com/apptentive/apptentive-androi
 
 ### Keep Up To Date
 
-We strive to fix bugs and add new features as quickly as possible. **Please watch our Github repo so stay up to date.**
+We strive to fix bugs and add new features as quickly as possible. **Please watch our Github repo to stay up to date.**
 
 # Setting up the Project
 
