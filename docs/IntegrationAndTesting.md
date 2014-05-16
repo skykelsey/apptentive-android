@@ -251,7 +251,7 @@ To set up the [Ratings Prompt](https://github.com/skykelsey/apptentive-android/b
 **Interaction**, first make sure you have created some [Events](#adding-events) in your app. Then, go to
 *Interactions -> Ratings Prompt*. There, you will be able to customize the text and behavior of the dialogs that make up
 the **Ratings Prompt**, and configure the logic that will determine when it will be shown. You will also need to pick
-where the **Ratings Prompt** will be shownn, by choosing an **Event** from the dropdown.
+where the **Ratings Prompt** will be shown, by choosing an **Event** from the dropdown.
 
 #### Surveys
 
@@ -262,7 +262,7 @@ constraints so it's shown to the right people. After your survey is live, you wi
 page.
 
 **Note:** If you were using surveys prior to version 1.5.0 of the Apptentive Android SDK, see this Migration Guide for
-instructions.
+instructions. 
 
 #### Upgrade Messages
 
@@ -403,7 +403,7 @@ Apptentive.addCustomPersonData(this, "1234567890");
 
 # Attachments
 
-You can send [hidden messages and attachments](https://github.com/skykelsey/apptentive-android/blob/new_docs/docs/Features.md#sending-hidden-messages-and-attachments) to Apptentoive that will show up in your customer conversation view on [apptentive.com](https://be.apptentive.com),
+You can send [hidden messages and attachments](https://github.com/skykelsey/apptentive-android/blob/new_docs/docs/Features.md#sending-hidden-messages-and-attachments) to Apptentive that will show up in your customer conversation view on [apptentive.com](https://be.apptentive.com),
 but are not shown to your customer.
 
 ###### Example
