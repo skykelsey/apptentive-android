@@ -322,7 +322,7 @@ and passing it to [Apptentive.addUrbanAirshipPushIntegration(Context context, St
 
 2. If you are not using a broadcast receiver, you can call [PushManager.getAPID()](http://docs.urbanairship.com/reference/libraries/android/latest/reference/com/urbanairship/push/PushManager.html#getAPID%28%29).
 This method may return null if Urban Airship hasn't finished registering, so don't give it to us until it returns an
-actual apid.
+actual APID.
 
     ###### Example
 
@@ -335,7 +335,7 @@ actual apid.
 
 #### Setting the Amazon Web Services SNS Registration ID
 
-Amazzon Web Services SNS uses GCM directly on the client, so you will need to use the GCM API to retreive the
+Amazon Web Services SNS uses GCM directly on the client, so you will need to use the GCM API to retreive the
 Registration ID. See the [GCM documentation](http://developer.android.com/google/gcm/client.html) if you are unsure how
 to retreive your Registration ID. When you have the Registration ID, pass it to [Apptentive.addAmazonSnsPushIntegration(Context context, String registrationId)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addAmazonSnsPushIntegration%28android.content.Context,%20java.lang.String%29).
 
