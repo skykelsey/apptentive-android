@@ -208,7 +208,7 @@ Places where you might want to show an **Interaction**:
 * Main Activity gains focus
 * Settings Activity gains focus
 * Customer performs an action that indicates they are confused
-* There is a natural pause in the app's UI where starting a conversation would not offend the customer
+* There is a natural pause in the app's UI where starting a conversation would not interrupt the customer
 
 Places where you might want to record a significant event:
 * Customer makes a purchase
