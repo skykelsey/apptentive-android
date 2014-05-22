@@ -17,7 +17,7 @@ and how they use your app, and to talk to them at the right time and in the righ
 
 #### Contributing
 
-We appriciate contributions to make this SDK better. If you have an improvement or bug fix, please [read this](CONTRIBUTING.md).
+We appreciate contributions to make this SDK better. If you have an improvement or bug fix, please [read this](CONTRIBUTING.md).
 
 #### Reporting Bugs
 
