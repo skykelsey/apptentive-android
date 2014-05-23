@@ -21,7 +21,7 @@ We appriciate contributions to make this SDK better. If you have an improvement 
 
 #### Reporting Bugs
 
-If you find a bug, please fill in the contriibutor agreement, then open a [github issue](https://github.com/apptentive/apptentive-android/issues?direction=desc&sort=created&state=open).
+If you find a bug, please fill in the contributor agreement, then open a [github issue](https://github.com/apptentive/apptentive-android/issues?direction=desc&sort=created&state=open).
 If it is an urgent bug, please contact support@apptentive.com.
 #### Notes
 
