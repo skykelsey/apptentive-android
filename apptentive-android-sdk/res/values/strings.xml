@@ -71,4 +71,5 @@
     <string name="apptentive_rating_provider_no_google_play">Google Play was not found. Please install Google Play before rating this app.</string>
     <string name="apptentive_rating_provider_no_amazon_appstore">Amazon Appstore was not found. Please install Amazon Appstore before rating this app.</string>
     <string name="apptentive_rating_provider_no_mikandi">MiKandi Market was not found. Please install MiKandi Market before rating this app.</string>
+    <string name="apptentive_rating_provider_no_nokia_x">The Nokia X Store was not found. Please install the Nokia X Store before rating this app.</string>
 </resources>
